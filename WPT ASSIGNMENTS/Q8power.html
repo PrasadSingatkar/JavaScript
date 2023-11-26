@@ -1,0 +1,30 @@
+<!-- Write a function pow(x,y) that calculates xy . Do not use the Math predefined objet -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power</title>
+
+    <script>
+        function power(){
+            var n1=document.getElementById("bn").value
+            var n2=document.getElementById("pn").value
+            var ans=1;
+            for(var i=1;i<=n2;i++){
+                    var ans=ans*n1;
+                        document.getElementById("mydiv").innerHTML=ans;
+            }
+        }
+    </script>
+</head>
+<body>
+        Enter base number : <input type="text" id="bn" name="bn">    
+        Enter power number : <input type="text" id="pn" name="pn">
+        <button id="btn" name="btn" onclick="power()">Calculate</button>
+        <div id="mydiv">
+
+        </div>    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!-- Write a program to print the multiplication table of a given number up to 10 multiples. Eg for number 2, output should be like
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <script>
+        function Table(){
+            var n= document.getElementById("num").value
+            var str="";
+            for(var i=1;i<=10;i++){
+                str+=n+"*"+i+"=";
+                 var str=str+i*n+"<br>";
+            }
+            document.getElementById("mydiv").innerHTML=str;
+        }
+    </script>
+</head>
+<body>
+    Enter Number : <input type="text" name="num" id="num" placeholder="Enter the number">
+    <button name="btn" id="btn" onclick="Table()">Create Table</button>
+    <br>
+    <div id="mydiv">
+    </div>
+</body>
+</html>

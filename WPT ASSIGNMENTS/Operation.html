@@ -1,0 +1,46 @@
+<!-- Write a function that accepts two numbers and a operator like (+,-,*, /) from user and performs the appropriate operation indicated by the operator. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathOperation</title>
+    <script>
+        function Perform(){
+        var n=parseInt(document.getElementById("num1").value)
+        var m=parseInt(document.getElementById("num2").value)
+        var o=document.getElementById("opr").value
+        switch (o) {
+            case "+":
+                var ans=n+m;
+                document.getElementById("mydiv").innerHTML=ans
+                break;
+            case "-":
+                var ans=n-m;
+                document.getElementById("mydiv").innerHTML=ans
+                break;
+            case "*":
+                var ans=n*m;
+                document.getElementById("mydiv").innerHTML=ans
+                break;
+            case "/":
+                var ans=n/m;
+                document.getElementById("mydiv").innerHTML=ans
+                break;
+            default:
+                document.write("Invalid Operand");
+                break;
+        }
+    }
+
+    </script>
+</head>
+<body>
+    Number1 : <input type="text" name="num1" id="num1"><br><br>
+    Number2 : <input type="text" name="num2" id="num2"><br><br>
+    Operand : <input type="text" name="opr" id="opr"><br><br>
+    <button id="action" name="btn" onclick="Perform()" >Perform Operation</button>
+    <div id="mydiv"></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!--
+     Create a web page to calculate the Compound Interest using the formula given below: 
+Compound Interest =
+Where: p = Principal,
+       r = Rate of Interest, 
+       n = period in years 
+The values used in the example in the following figure are as follows: P = 1000, n = 1, r = 10 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound_Interest</title>
+    <script>
+        function Compound(){
+        var p=document.getElementById("principal").value;
+        var roi=document.getElementById("roi").value;
+        var period=document.getElementById("period").value;
+        var compound=[p*(1+(roi/100))]-p;
+        document.getElementById("mydiv").innerHTML=compound;
+    }
+
+    </script>
+</head>
+<body>
+    <h4>========================================================================================</h4>
+    <h3>___________________Calculate Compound Interest_____________________</h3>
+    <h4>========================================================================================</h4>
+    <table>
+    <tr>
+        <td>Principal :</td>
+        <td><input type="text" id="principal" name="principal"></td>
+    </tr>
+    <tr><td>Rate of Interest: </td><td><input type="text" id="roi" name="roi"></td></tr>
+    <tr><td>Period in years :</td><td><input type="text" id="period" name="period"></td></tr>
+    <tr><td><button name="btn" onclick="Compound()">Calculate</button></td></tr>
+    </table>    
+    <div id="mydiv">
+
+    </div>
+</body>
+</html>

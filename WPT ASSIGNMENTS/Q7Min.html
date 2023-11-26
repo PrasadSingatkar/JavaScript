@@ -1,0 +1,34 @@
+<!-- Write a program min() that takes any number of arguments and returns minimum number in the set of arguments. Do not use the Math predefined objet -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min</title>
+    <script>
+        function min(){
+            let exit=false;
+            var min=prompt("Enter Number : ");
+            
+            while (exit!=true) {
+                var x=prompt("Enter another number : ");
+                if(x==-1)
+                exit=true;
+
+                if(x!=-1)
+                if(x<min)
+                    min=x;                
+            }
+            document.getElementById("mydiv").innerHTML=min;
+        }
+    </script>
+</head>
+<body>
+
+   <button onclick="min()">DISPLAY</button> 
+   <div id="mydiv">
+
+   </div>
+</body>
+</html>

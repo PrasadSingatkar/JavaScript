@@ -1,0 +1,29 @@
+<!-- Accept an integer value and a message from user and print the message that many number oftimes. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number of Times Print</title>
+    <script>
+        function printIT()
+        {
+        var n=document.getElementById("int").value
+        var m=document.getElementById("msg").value
+            str="";
+        for(var i=1;i<=n;i++){
+            str+=`${m} `
+        }
+        document.getElementById("mydiv").innerHTML=str
+        }
+    </script>
+
+</head>
+<body>
+    Enter Number: <input type="text" name="Int" id="int"><br>
+    Enter Message: <input type="text" name="msg" id="msg"><br>
+    <button type="button" id="btn" name="btn" onclick="printIT()">PrintIT</button>
+    <div id="mydiv"></div>
+</body>
+</html>
